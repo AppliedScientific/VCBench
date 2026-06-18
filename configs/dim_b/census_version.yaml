@@ -1,0 +1,16 @@
+# CELLxGENE Census version pin for Dim B (§I.1 + §I.2).
+# Pinning the Census release date is critical for reproducibility — the
+# Census is a rolling release and any drift in inclusion criteria changes
+# the cell pool and therefore the per-tissue label intersections used by
+# the common-label-set protocol.
+
+census_version: "1.6.0"
+release_type: LTS
+release_date: "2025-04"
+notes: |
+  This is the LTS release used for the §I.4 reference values. Re-running
+  Dim B against a newer Census release will give different per-tissue
+  numbers — validate against tests/reference_values.json after any change.
+
+source: cellxgene.cziscience.com
+api: cellxgene_census                           # Python package

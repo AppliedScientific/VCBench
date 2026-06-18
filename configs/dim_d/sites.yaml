@@ -1,0 +1,13 @@
+# Dim D train/test site split (§I.1).
+# NeurIPS 2021 CITE-seq has 4 collection sites; the train/test split is
+# site-based to control for batch confounding in cross-modal prediction.
+
+split_strategy: site_based
+
+train_sites: [s1d1, s1d2, s2d1, s3d1]           # 3 of 4 sites for training
+test_sites:  [s4d1, s4d2, s4d3, s4d8, s4d9]     # site 4 held out
+
+notes: |
+  Site-based held-out test ensures the cross-modal predictor isn't
+  memorising site-specific batch effects. Per donor counts and exact
+  cell-id assignments are persisted alongside the processed h5ad.

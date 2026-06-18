@@ -1,0 +1,17 @@
+schema_version: vcbench-contamination-v1
+model: uce-33-layer
+model_version: 33-layer 656M
+pretraining_corpus: CELLxGENE Census (Quake Lab snapshot)
+pretraining_corpus_md5: null
+included_datasets:
+  - GSE194122   # NeurIPS 2021 CITE-seq — likely seen via Census
+excluded_datasets:
+  - GSE133344
+  - "10.25452/figshare.plus.20029387"
+excluded_tissue_types:
+  - cell culture
+notes: >
+  UCE's static gene tokens are ESM-2 protein-language-model features
+  (sequence-similarity-based, not learned from cell data), so the gene-level
+  representation is independent of the cell corpus. Cell-level representations
+  remain subject to Census-derived exposure on the same accessions as scGPT.

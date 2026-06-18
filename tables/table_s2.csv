@@ -1,0 +1,31 @@
+model,tissue,native_macroF1,native_wtdF1,native_n_classes,common_macroF1,common_wtdF1,common_n_classes
+PCA+kNN (baseline),lung,0.1272,0.1632,54,0.4649,0.6689,7
+PCA+kNN (baseline),liver,0.2396,0.6623,17,0.4460,0.8125,6
+PCA+kNN (baseline),heart,0.2150,0.3164,26,0.5658,0.7656,2
+PCA+kNN (baseline),kidney,0.1043,0.2301,44,0.3265,0.4898,11
+PCA+kNN (baseline),brain,0.1463,0.2378,69,0.6806,0.8232,5
+Geneformer V2-316M,lung,0.0188,0.0093,7,0.0188,0.0093,7
+Geneformer V2-316M,liver,0.1668,0.2383,6,0.1719,0.2556,6
+Geneformer V2-316M,heart,0.5645,0.9109,2,0.4833,0.9040,2
+Geneformer V2-316M,kidney,0.0679,0.3790,11,0.0639,0.3917,11
+Geneformer V2-316M,brain,0.0886,0.0524,5,0.1156,0.0544,5
+scGPT (fine-tuned),lung,0.0001,0.0000,54,0.0594,0.1093,7
+scGPT (fine-tuned),liver,0.0431,0.4240,17,0.0071,0.0009,6
+scGPT (fine-tuned),heart,0.0075,0.0212,26,0.4795,0.8837,2
+scGPT (fine-tuned),kidney,0.0085,0.0864,44,0.0040,0.0010,11
+scGPT (fine-tuned),brain,0.0013,0.0041,69,0.0626,0.0580,5
+UCE 33-layer,lung,N/A,N/A,N/A,N/A,N/A,N/A
+UCE 33-layer,liver,N/A,N/A,N/A,N/A,N/A,N/A
+UCE 33-layer,heart,0.0299,0.0858,26,0.4580,0.7387,2
+UCE 33-layer,kidney,N/A,N/A,N/A,N/A,N/A,N/A
+UCE 33-layer,brain,0.0235,0.0666,69,0.2999,0.3714,5
+TranscriptFormer,lung,0.0849,0.0867,54,0.2060,0.2764,7
+TranscriptFormer,liver,0.2269,0.6071,17,0.4954,0.8442,6
+TranscriptFormer,heart,N/A,N/A,N/A,N/A,N/A,N/A
+TranscriptFormer,kidney,N/A,N/A,N/A,N/A,N/A,N/A
+TranscriptFormer,brain,N/A,N/A,N/A,N/A,N/A,N/A
+Arc State,lung,N/A,N/A,N/A,N/A,N/A,N/A
+Arc State,liver,N/A,N/A,N/A,N/A,N/A,N/A
+Arc State,heart,N/A,N/A,N/A,N/A,N/A,N/A
+Arc State,kidney,N/A,N/A,N/A,N/A,N/A,N/A
+Arc State,brain,N/A,N/A,N/A,N/A,N/A,N/A

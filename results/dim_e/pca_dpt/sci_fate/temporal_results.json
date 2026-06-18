@@ -1,0 +1,9 @@
+{
+  "kendall_tau": 0.22686520668131757,
+  "kendall_p": 1.554967609860569e-143,
+  "knn_balanced_accuracy": 0.6198825438246864,
+  "n_valid_dpt": 6567,
+  "n_cells": 6567,
+  "model": "PCA + DPT",
+  "dataset": "sci_fate"
+}

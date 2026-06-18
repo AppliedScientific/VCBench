@@ -1,0 +1,8 @@
+{
+  "mean_pearson_r": 0.13153961300849915,
+  "median_pearson_r": 0.0740065649151802,
+  "rmse": 0.7609367966651917,
+  "n_proteins": 50,
+  "n_valid_proteins": 50,
+  "model": "uce"
+}

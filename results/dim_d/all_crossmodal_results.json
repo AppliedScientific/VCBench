@@ -1,0 +1,58 @@
+{
+  "PCA + ridge": {
+    "mean_pearson_r": 0.11006041616201401,
+    "median_pearson_r": 0.06274685263633728,
+    "rmse": 0.7740868330001831,
+    "n_proteins": 50,
+    "n_valid_proteins": 50,
+    "model": "PCA + ridge"
+  },
+  "scLinear": {
+    "mean_pearson_r": 0.12853823602199554,
+    "median_pearson_r": 0.0705304741859436,
+    "rmse": 0.7564112544059753,
+    "n_proteins": 50,
+    "n_valid_proteins": 50,
+    "model": "scLinear"
+  },
+  "Mean celltype": {
+    "mean_pearson_r": 0.151624858379364,
+    "median_pearson_r": 0.11359978467226028,
+    "rmse": 0.7758790850639343,
+    "n_proteins": 50,
+    "n_valid_proteins": 50,
+    "model": "Mean celltype"
+  },
+  "geneformer": {
+    "mean_pearson_r": 0.0006847945624031126,
+    "median_pearson_r": 0.0015946493949741125,
+    "rmse": 0.8480430245399475,
+    "n_proteins": 50,
+    "n_valid_proteins": 50,
+    "model": "geneformer"
+  },
+  "scgpt": {
+    "mean_pearson_r": 0.0637989342212677,
+    "median_pearson_r": 0.034337371587753296,
+    "rmse": 0.8103820085525513,
+    "n_proteins": 50,
+    "n_valid_proteins": 50,
+    "model": "scgpt"
+  },
+  "uce": {
+    "mean_pearson_r": 0.13153961300849915,
+    "median_pearson_r": 0.0740065649151802,
+    "rmse": 0.7609367966651917,
+    "n_proteins": 50,
+    "n_valid_proteins": 50,
+    "model": "uce"
+  },
+  "transcriptformer": {
+    "mean_pearson_r": 0.2317645400762558,
+    "median_pearson_r": 0.1688048541545868,
+    "rmse": 0.6721348166465759,
+    "n_proteins": 50,
+    "n_valid_proteins": 50,
+    "model": "transcriptformer"
+  }
+}

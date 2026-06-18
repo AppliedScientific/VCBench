@@ -1,0 +1,6 @@
+model,vc_level
+Geneformer V2-316M,1
+scGPT (fine-tuned),1
+UCE 33-layer,1
+TranscriptFormer,2
+Arc State,1

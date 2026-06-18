@@ -1,0 +1,29 @@
+# Convenience docker-compose for running vcbench locally without
+# memorising the docker run incantation.
+#
+# Usage:
+#   docker compose run --rm tests        # run unit tests in container
+#   docker compose run --rm cli levels   # run any vcbench CLI subcommand
+#   docker compose run --rm shell        # interactive shell
+
+services:
+  base:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: vcbench:cpu
+    volumes:
+      - .:/work
+    working_dir: /work
+
+  tests:
+    extends: base
+    command: ["python", "-m", "pytest", "tests/unit/", "-q"]
+
+  cli:
+    extends: base
+    entrypoint: ["python", "-m", "vcbench"]
+
+  shell:
+    extends: base
+    entrypoint: ["bash"]

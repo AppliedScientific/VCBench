@@ -1,0 +1,15 @@
+{
+  "method": "pca_ridge_baseline",
+  "dataset": "neurips_cite_seq",
+  "n_train": 73511,
+  "n_test": 16750,
+  "n_rna_genes": 13953,
+  "n_proteins": 134,
+  "split": "site4_holdout",
+  "mse": 0.0448,
+  "r2": 0.0179,
+  "pearson_per_protein_mean": 0.6142,
+  "pearson_per_protein_median": 0.6823,
+  "pearson_per_cell_mean": 0.8649,
+  "pearson_per_cell_median": 0.8713
+}

@@ -1,0 +1,12 @@
+{
+  "kendall_tau": 0.050968625133227724,
+  "kendall_p": 9.98174567250753e-09,
+  "knn_balanced_accuracy": 0.5495475751244078,
+  "n_valid_dpt": 6567,
+  "n_cells": 6567,
+  "model": "transcriptformer",
+  "dataset": "sci_fate",
+  "embedding_dim_original": 2048,
+  "embedding_dim_pca": 50,
+  "pca_variance_explained": 0.9687764644622803
+}

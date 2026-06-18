@@ -1,0 +1,9 @@
+model,dataset,rho,pval,n_perturbations,note
+geneformer,norman,,,0,LFC inference failed: Unrecognized predictions.h5ad layout
+geneformer,replogle,,,0,predictions.h5ad missing
+scgpt,norman,,,0,LFC inference failed: Unrecognized predictions.h5ad layout
+scgpt,replogle,,,0,predictions.h5ad missing
+transcriptformer,norman,,,0,predictions.h5ad missing
+transcriptformer,replogle,,,0,predictions.h5ad missing
+state,norman,,,0,predictions.h5ad missing
+state,replogle,,,0,predictions.h5ad missing

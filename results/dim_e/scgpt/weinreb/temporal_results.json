@@ -1,0 +1,12 @@
+{
+  "kendall_tau": -0.10283220709081149,
+  "kendall_p": 9.304093063047522e-190,
+  "knn_balanced_accuracy": 0.6667604908992001,
+  "n_valid_dpt": 49008,
+  "n_cells": 49008,
+  "model": "scgpt",
+  "dataset": "weinreb",
+  "embedding_dim_original": 512,
+  "embedding_dim_pca": 50,
+  "pca_variance_explained": 0.9994184374809265
+}

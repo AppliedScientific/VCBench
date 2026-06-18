@@ -1,0 +1,20 @@
+schema_version: vcbench-contamination-v1
+model: scgpt
+model_version: scGPT_human (May-2023 checkpoint)
+pretraining_corpus: CELLxGENE Census (33M cells, May-2023 LTS)
+pretraining_corpus_md5: null
+included_datasets:
+  - GSE194122   # NeurIPS 2021 CITE-seq — confirmed in Census, RNA portion likely seen
+excluded_datasets:
+  - GSE133344                            # Norman 2019 (cell culture excluded by Census)
+  - "10.25452/figshare.plus.20029387"    # Replogle 2022 (cell culture excluded by Census)
+excluded_tissue_types:
+  - cell culture
+  - perturbation_assay
+notes: >
+  Census-style structural exclusions cover Norman / Replogle / Weinreb / sci-fate.
+  CITE-seq GSE194122 is *not* excluded: it is RNA-only single-cell data from BMMC
+  donors and is in the Census release used for pretraining. The surface-protein
+  modality is not in the corpus, so the cross-modal prediction task itself is
+  not contaminated, but the RNA representations conditioning that prediction may
+  have been shaped by exposure.

@@ -1,0 +1,4 @@
+Calibration probe definition: for each perturbation in the held-out test set, the prediction entropy is Var(predicted_LFC) across genes, and the prediction error is mean(|predicted_LFC − true_LFC|) across genes. Spearman ρ is computed over the resulting per-perturbation pair of (entropy, error) vectors.
+Interpretation: ρ > 0 means the model produces higher-entropy predictions on perturbations it gets wrong — a minimal form of epistemic calibration. ρ ≈ 0 means no calibration signal; ρ < 0 is pathological (the model is MORE confident on harder cases).
+N/A rows are (model, dataset) combinations where prediction caches were not produced for this release (e.g. Arc State × Replogle). 'note' fields surface defensive failure modes from the calibration_probe script.
+Source: results/calibration_probe/calibration_results.json, produced by the calibration probe (src/evaluation/calibration_probe.py).

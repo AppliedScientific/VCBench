@@ -1,0 +1,33 @@
+# scGPT (fine-tuned) Dim A recipe (§I.2 + Cui et al. 2024 perturbation tutorial).
+# Reproduces §I.4 reference: PRR = 0.5025 on full Norman test; 0.5445 on
+# 71-doubles shared subset; 0.4196 on 36-singles novel subset.
+#
+# Consumed by: vcbench.models.SCGPT + SCGPTConfig.
+
+model_id: scgpt-fine-tuned
+checkpoint_repo: bowang-lab/scGPT_human
+
+architecture: TransformerGenerator
+loss: masked_mse
+
+fine_tuning:
+  epochs_max: 15
+  early_stopping_patience: 10
+  learning_rate: 1.0e-4
+  batch_size: 16
+  scheduler:
+    type: StepLR
+    gamma: 0.9
+  max_seq_length: 1536
+  optimizer: Adam
+  seed: 42
+
+inference:
+  api: pred_perturb                             # native scGPT method
+
+gears_split:
+  kind: simulation
+  seed: 1
+  notes: |
+    Same GEARS simulation split (seed=1) used by every Dim A model so
+    the cell-eval comparison is fair. 107 held-out test perturbations.

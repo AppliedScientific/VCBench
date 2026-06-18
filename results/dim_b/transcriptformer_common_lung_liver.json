@@ -1,0 +1,37 @@
+{
+  "tissues_evaluated": [
+    "lung",
+    "liver"
+  ],
+  "tf_per_tissue": {
+    "lung": {
+      "native_macroF1": 0.08563990520498688,
+      "native_wtdF1": 0.08249180616033207,
+      "common_macroF1": 0.20601196363123225,
+      "common_wtdF1": 0.2764362288409894,
+      "n_native_classes": 54,
+      "n_common_classes": 7,
+      "h_eval_cells_native": 35122,
+      "m_eval_cells_native": 48595,
+      "h_eval_cells_common": 15613,
+      "m_eval_cells_common": 8958
+    },
+    "liver": {
+      "native_macroF1": 0.22472805985009076,
+      "native_wtdF1": 0.6030524810873089,
+      "common_macroF1": 0.4954349966887892,
+      "common_wtdF1": 0.8442078972548052,
+      "n_native_classes": 17,
+      "n_common_classes": 6,
+      "h_eval_cells_native": 18686,
+      "m_eval_cells_native": 26352,
+      "h_eval_cells_common": 8089,
+      "m_eval_cells_common": 20319
+    }
+  },
+  "aggregate_native_macroF1": 0.15518398252753882,
+  "aggregate_native_wtdF1": 0.34277214362382047,
+  "aggregate_common_macroF1": 0.35072348016001076,
+  "aggregate_common_wtdF1": 0.5603220630478973,
+  "note": "k=10 cosine kNN; labels derived from source AnnData by row index (TF preserved cell order, verified). Subset = the 2 tissues v2 bolded TF on (lung+liver)."
+}

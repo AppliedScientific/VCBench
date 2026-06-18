@@ -1,0 +1,79 @@
+{
+  "method": "pca_knn_common_set",
+  "tissues": [
+    "lung",
+    "liver",
+    "heart",
+    "kidney",
+    "brain"
+  ],
+  "per_tissue_native": [
+    {
+      "macro_f1": 0.12715345550019985,
+      "weighted_f1": 0.16323429427658712,
+      "n_shared_types": 54,
+      "n_shared_genes": 935
+    },
+    {
+      "macro_f1": 0.23962224742757357,
+      "weighted_f1": 0.6622555856827105,
+      "n_shared_types": 17,
+      "n_shared_genes": 1047
+    },
+    {
+      "macro_f1": 0.21498538033507358,
+      "weighted_f1": 0.31644793099363866,
+      "n_shared_types": 26,
+      "n_shared_genes": 634
+    },
+    {
+      "macro_f1": 0.10431019428490917,
+      "weighted_f1": 0.23007901755304505,
+      "n_shared_types": 44,
+      "n_shared_genes": 893
+    },
+    {
+      "macro_f1": 0.14625937772562217,
+      "weighted_f1": 0.2378362677862056,
+      "n_shared_types": 69,
+      "n_shared_genes": 729
+    }
+  ],
+  "per_tissue_common_set": [
+    {
+      "macro_f1": 0.46486259059682705,
+      "weighted_f1": 0.6688502028375228,
+      "n_shared_types": 7,
+      "n_shared_genes": 935
+    },
+    {
+      "macro_f1": 0.44601786074982974,
+      "weighted_f1": 0.8125451790866152,
+      "n_shared_types": 6,
+      "n_shared_genes": 1047
+    },
+    {
+      "macro_f1": 0.5658201798052395,
+      "weighted_f1": 0.7655872727214234,
+      "n_shared_types": 2,
+      "n_shared_genes": 634
+    },
+    {
+      "macro_f1": 0.32651663228473016,
+      "weighted_f1": 0.4897860944138653,
+      "n_shared_types": 11,
+      "n_shared_genes": 893
+    },
+    {
+      "macro_f1": 0.6806012121443218,
+      "weighted_f1": 0.8232091903230616,
+      "n_shared_types": 5,
+      "n_shared_genes": 729
+    }
+  ],
+  "aggregate_native_macroF1": 0.16646613105467567,
+  "aggregate_common_set_macroF1": 0.4967636951161897,
+  "aggregate_native_wtdF1": 0.3219706192584374,
+  "aggregate_common_set_wtdF1": 0.7119955878764976,
+  "common_label_set_source": "results/dim_b/common_label_set_per_tissue.json"
+}

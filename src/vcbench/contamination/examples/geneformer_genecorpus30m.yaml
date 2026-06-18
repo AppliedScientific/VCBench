@@ -1,0 +1,19 @@
+schema_version: vcbench-contamination-v1
+model: geneformer-v2-316m
+model_version: V2-316M
+pretraining_corpus: Genecorpus-30M
+pretraining_corpus_md5: null   # not released by Ying Lab
+included_datasets: []          # corpus aggregates ~30M cells; no per-accession list released
+excluded_datasets:
+  - GSE133344                  # Norman 2019 (K562) — Ying Lab states cell-line exclusions cover this
+  - "10.25452/figshare.plus.20029387"  # Replogle 2022 (K562)
+excluded_tissue_types:
+  - cell culture
+  - immortalised cell line
+  - malignant cell
+notes: >
+  Genecorpus-30M deliberately excludes immortalised and malignant cell lines.
+  Norman 2019 (K562) and Replogle 2022 (K562, RPE1) are therefore structurally
+  out-of-corpus. CITE-seq bone marrow donors may be partially in-corpus on the
+  RNA modality but the surface-protein measurements are not learnable from the
+  corpus.

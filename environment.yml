@@ -1,0 +1,31 @@
+# Top-level conda environment for VCBench (CPU-only).
+# Creates an env with the same dependency set as requirements.txt plus
+# pytest. For FM fine-tuning use one of the per-model environments under
+# configs/environments/ instead.
+#
+# Usage:
+#   conda env create -f environment.yml
+#   conda activate vcbench
+#   pip install -e .
+#   make tests
+
+name: vcbench
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12
+  - numpy>=1.23
+  - pandas>=1.5
+  - scipy>=1.10
+  - scikit-learn>=1.2
+  - anndata>=0.10
+  - matplotlib>=3.7
+  - seaborn>=0.13
+  - pyyaml>=6.0
+  - pydantic>=2.0
+  - pytest>=7.0
+  - pytest-cov>=4.0
+  - pip
+  - pip:
+    - ruff>=0.4

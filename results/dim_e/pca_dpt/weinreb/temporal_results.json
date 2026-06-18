@@ -1,0 +1,9 @@
+{
+  "kendall_tau": 0.15266755489959571,
+  "kendall_p": 0.0,
+  "knn_balanced_accuracy": 0.7375472595995869,
+  "n_valid_dpt": 49008,
+  "n_cells": 49008,
+  "model": "PCA + DPT",
+  "dataset": "weinreb"
+}

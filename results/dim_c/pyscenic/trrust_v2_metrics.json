@@ -1,0 +1,11 @@
+{
+  "AUROC": 0.5013907613582566,
+  "AUPRC": 0.0010759743708491827,
+  "AUPRC_ratio": 1.0218036820257583,
+  "EPR": 3.495659979675562,
+  "edge_density": 0.001053014771600773,
+  "n_true_edges": 3260,
+  "n_total_pairs": 3095873,
+  "source": "pyscenic (GRNBoost2 + ctx; hg38 v10 clust; scripts/run_scenic_baseline.py; scored via src.models.grn_utils.evaluate_and_save_grn \u2014 TRRUST-TF universe)",
+  "edges_csv": "results/baselines/scenic_hesc_edges.csv"
+}

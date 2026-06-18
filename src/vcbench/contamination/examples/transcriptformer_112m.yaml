@@ -1,0 +1,17 @@
+schema_version: vcbench-contamination-v1
+model: transcriptformer
+model_version: TF-110M (12-species)
+pretraining_corpus: CZI multi-species corpus (~112M cells across 12 species)
+pretraining_corpus_md5: null
+included_datasets:
+  - GSE194122   # likely included — CZI builds both Census and the TF training corpus
+excluded_datasets:
+  - GSE133344
+  - "10.25452/figshare.plus.20029387"
+excluded_tissue_types:
+  - cell culture
+  - perturbation_assay
+notes: >
+  TF's training corpus has ~50% overlap with the May-2023 Census release per the
+  Pearce et al. 2025 supplement; per-accession enumeration not published. Same
+  structural cell-culture / perturbation-assay exclusions as Census.

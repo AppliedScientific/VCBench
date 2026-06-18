@@ -1,0 +1,18 @@
+# Weinreb LARRY Dim E dataset config (§I.1).
+# Weinreb et al. 2020. In vitro hematopoiesis time course.
+
+geo_accession: GSE140802
+reference: "Weinreb et al. 2020"
+n_cells: 49008
+n_timepoints: 3                                 # day 2, day 4, day 6
+species: mouse                                  # HSPCs
+
+local_path: "data/processed/weinreb.h5ad"
+
+# TranscriptFormer special-case bootstrap protocol (§I.2 + §I.4 footnote)
+transcriptformer_bootstrap_protocol:
+  reason: "ARPACK non-convergence on full 49,008-cell graph Laplacian"
+  n_bootstrap: 10
+  subsample_size: 5000
+  reported_as: "mean ± std"
+  reference_value: "0.041 ± 0.078 Kendall τ-b"

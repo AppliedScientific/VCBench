@@ -1,0 +1,43 @@
+{
+  "lung": [
+    "capillary endothelial cell",
+    "club cell",
+    "endothelial cell of lymphatic vessel",
+    "pulmonary alveolar type 1 cell",
+    "pulmonary alveolar type 2 cell",
+    "unknown",
+    "vascular associated smooth muscle cell"
+  ],
+  "liver": [
+    "B cell",
+    "Kupffer cell",
+    "hepatic stellate cell",
+    "hepatocyte",
+    "monocyte",
+    "unknown"
+  ],
+  "heart": [
+    "fibroblast of cardiac tissue",
+    "pericyte"
+  ],
+  "kidney": [
+    "T cell",
+    "endothelial cell",
+    "epithelial cell of proximal tubule",
+    "fibroblast",
+    "kidney connecting tubule epithelial cell",
+    "kidney distal convoluted tubule epithelial cell",
+    "macrophage",
+    "pericyte",
+    "podocyte",
+    "renal alpha-intercalated cell",
+    "renal beta-intercalated cell"
+  ],
+  "brain": [
+    "GABAergic neuron",
+    "glutamatergic neuron",
+    "microglial cell",
+    "oligodendrocyte",
+    "unknown"
+  ]
+}

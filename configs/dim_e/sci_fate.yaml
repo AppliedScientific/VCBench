@@ -1,0 +1,11 @@
+# sci-fate Dim E dataset config (§I.1).
+# Cao et al. 2020. A549 + dexamethasone metabolic-labelled time course.
+
+geo_accession: GSE131351
+reference: "Cao et al. 2020"
+n_cells: 6567
+n_timepoints: 6                                 # 0–10 h dexamethasone exposure
+cell_type: A549
+treatment: dexamethasone (GR agonist)
+
+local_path: "data/processed/sci_fate.h5ad"

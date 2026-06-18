@@ -1,0 +1,16 @@
+# Core runtime dependencies for the vcbench package.
+# These are sufficient for `make tests`, `make all` against cached embeddings,
+# and importing the three reusable methodological tools.
+#
+# For FM fine-tuning + raw embedding extraction install one of the per-model
+# environment files under configs/environments/ instead of (or alongside) this.
+
+numpy>=1.23
+pandas>=1.5
+scipy>=1.10
+scikit-learn>=1.2
+anndata>=0.10
+matplotlib>=3.7
+seaborn>=0.13
+pyyaml>=6.0
+pydantic>=2.0

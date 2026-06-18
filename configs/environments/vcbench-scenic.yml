@@ -1,0 +1,13 @@
+name: vcbench-scenic
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pip
+  - pip:
+      - pyscenic
+      - scanpy
+      - anndata
+      - pandas
+      - numpy

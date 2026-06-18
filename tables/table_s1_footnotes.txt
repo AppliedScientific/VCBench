@@ -1,0 +1,5 @@
+*  Wall-clock estimated from log cadence; full re-run not attempted given resource constraints.
+‡  Cached short-circuit run; original training time folded into the parent master pipeline.
+§  Sum of four attempts including two OOM retries (TF Dim B completed on lung + liver only).
+¶  Arc State 110M training on the GEARS split (max_steps = 40,000 reached).
+All times on a single NVIDIA A100 80 GB GPU.

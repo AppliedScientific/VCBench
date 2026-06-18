@@ -1,0 +1,13 @@
+model,dataset,kendall_tau,kendall_tau_std_bootstrap,kendall_p,kNN_balanced_accuracy,kNN_balanced_accuracy_std,n_cells,n_timepoints,note
+Geneformer V2-316M,sci_fate,0.0128,—,1.49e-01,0.4094,—,6567,4,
+Geneformer V2-316M,weinreb,-0.0473,—,1.45e-41,0.6977,—,49008,3,
+scGPT (fine-tuned),sci_fate,-0.0115,—,1.96e-01,0.4386,—,6567,4,
+scGPT (fine-tuned),weinreb,-0.1028,—,9.30e-190,0.6668,—,49008,3,
+UCE 33-layer,sci_fate,0.1715,—,6.79e-83,0.6143,—,6567,4,
+UCE 33-layer,weinreb,0.0997,—,1.73e-178,0.7198,—,49008,3,
+TranscriptFormer,sci_fate,0.051,—,9.98e-09,0.5495,—,6567,4,
+TranscriptFormer,weinreb,0.0414,0.0779,N/A (bootstrap),0.3506,0.0239,"49008 (10×5,000 bootstrap)",3,Full 49K ARPACK non-convergent. Bootstrap of 10×5K random subsamples; mean±std reported.
+PCA + DPT,sci_fate,0.2269,—,1.55e-143,0.6199,—,6567,4,
+PCA + DPT,weinreb,0.1527,—,0.00e+00,0.7375,—,49008,3,
+Arc State,sci_fate,DNR,—,DNR,DNR,—,—,4,DNR (not executed).
+Arc State,weinreb,N/A,—,N/A,N/A,—,—,3,Arc State tokenizer lacks mouse-gene mapping for LARRY.

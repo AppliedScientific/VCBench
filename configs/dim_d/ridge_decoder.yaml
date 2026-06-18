@@ -1,0 +1,17 @@
+# Dim D ridge decoder configuration (§I.2 cross-modal probe protocol).
+# Used by every FM under the ZS+D regime to project cell embeddings into
+# the 134-protein space.
+
+method: ridge_regression
+alpha: 1.0                                      # standard L2 strength
+fit_intercept: true
+
+input: "RNA_embedding"                          # cell embedding from FM
+output: "ADT_protein_abundance"                 # 134 surface protein vector
+
+aggregation:
+  per_protein_pearson:
+    - mean                                      # §I.4 binding metric (Table 2)
+    - median
+  rmse:
+    - per_cell_per_protein_then_pooled

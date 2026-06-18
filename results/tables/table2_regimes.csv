@@ -1,0 +1,6 @@
+,A,B,C,D,E
+Geneformer V2-316M,FT+D,ZS,IE,ZS+D,ZS
+scGPT (fine-tuned),FT,ZS,IE,ZS+D,ZS
+UCE 33-layer,N/A,ZS,N/A,ZS+D,ZS
+TranscriptFormer,ZS+D,ZS,IE,ZS+D,ZS
+Arc State,FT,N/A,N/A,DNR,DNR

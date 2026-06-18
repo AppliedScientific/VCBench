@@ -1,0 +1,3 @@
+kendall_tau_std_bootstrap is non-empty only when the Kendall τ was computed over bootstrap replicates rather than on the full matrix (single-shot runs report kendall_p instead).
+TranscriptFormer Weinreb: full 49,008-cell ARPACK eigendecomposition did not converge; values reported are mean ± std over 10 random subsamples of 5,000 cells. kendall_p is therefore not available.
+Arc State is N/A on Dimension E: its tokenizer lacks the mouse-gene mapping required for LARRY/Weinreb, and the sci-fate subset was not run in this evaluation (DNR).

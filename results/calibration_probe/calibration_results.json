@@ -1,0 +1,74 @@
+[
+  {
+    "model": "geneformer",
+    "dataset": "norman",
+    "rho": -0.1188,
+    "pval": 0.2251,
+    "n_perturbations": 106,
+    "entropy_mean": 0.001239,
+    "entropy_std": 0.000489,
+    "mae_mean": 0.018501,
+    "mae_std": 0.008802,
+    "note": ""
+  },
+  {
+    "model": "geneformer",
+    "dataset": "replogle",
+    "rho": null,
+    "pval": null,
+    "n_perturbations": 0,
+    "note": "Dataset not included in calibration probe (Norman only)"
+  },
+  {
+    "model": "scgpt",
+    "dataset": "norman",
+    "rho": 0.1314,
+    "pval": 0.1775,
+    "n_perturbations": 107,
+    "entropy_mean": 0.001907,
+    "entropy_std": 0.003430,
+    "mae_mean": 0.020267,
+    "mae_std": 0.007339,
+    "note": ""
+  },
+  {
+    "model": "scgpt",
+    "dataset": "replogle",
+    "rho": null,
+    "pval": null,
+    "n_perturbations": 0,
+    "note": "Dataset not included in calibration probe (Norman only)"
+  },
+  {
+    "model": "transcriptformer",
+    "dataset": "norman",
+    "rho": null,
+    "pval": null,
+    "n_perturbations": 0,
+    "note": "DNR (compute budget exceeded)"
+  },
+  {
+    "model": "transcriptformer",
+    "dataset": "replogle",
+    "rho": null,
+    "pval": null,
+    "n_perturbations": 0,
+    "note": "DNR"
+  },
+  {
+    "model": "state",
+    "dataset": "norman",
+    "rho": null,
+    "pval": null,
+    "n_perturbations": 0,
+    "note": "DNR (skipped; no perturbation prediction API)"
+  },
+  {
+    "model": "state",
+    "dataset": "replogle",
+    "rho": null,
+    "pval": null,
+    "n_perturbations": 0,
+    "note": "DNR"
+  }
+]

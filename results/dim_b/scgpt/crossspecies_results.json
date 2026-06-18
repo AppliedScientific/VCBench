@@ -1,0 +1,37 @@
+{
+  "per_tissue": [
+    {
+      "macro_f1": 9.729985306201877e-05,
+      "weighted_f1": 1.383962515412437e-05,
+      "n_shared_types": 54,
+      "tissue": "lung"
+    },
+    {
+      "macro_f1": 0.04311321355083685,
+      "weighted_f1": 0.42395150806928905,
+      "n_shared_types": 17,
+      "tissue": "liver"
+    },
+    {
+      "macro_f1": 0.007524665516998211,
+      "weighted_f1": 0.021212810781736487,
+      "n_shared_types": 26,
+      "tissue": "heart"
+    },
+    {
+      "macro_f1": 0.008514603067699819,
+      "weighted_f1": 0.08635456017270883,
+      "n_shared_types": 44,
+      "tissue": "kidney"
+    },
+    {
+      "macro_f1": 0.0012837463870610665,
+      "weighted_f1": 0.004104877333670706,
+      "n_shared_types": 69,
+      "tissue": "brain"
+    }
+  ],
+  "avg_macro_f1": 0.012106705675131595,
+  "avg_weighted_f1": 0.10712751919651184,
+  "n_tissues": 5
+}

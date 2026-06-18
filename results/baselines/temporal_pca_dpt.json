@@ -1,0 +1,18 @@
+{
+  "sci_fate": {
+    "method": "pca_dpt",
+    "n_cells": 6567,
+    "n_timepoints": 6,
+    "kendall_tau_b": 0.2249,
+    "kendall_p": 3.984812809051079e-141,
+    "order_accuracy": 0.6229
+  },
+  "weinreb": {
+    "method": "pca_dpt",
+    "n_cells": 49008,
+    "n_timepoints": 3,
+    "kendall_tau_b": 0.153,
+    "kendall_p": 0.0,
+    "order_accuracy": 0.5966
+  }
+}

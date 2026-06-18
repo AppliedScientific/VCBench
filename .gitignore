@@ -1,0 +1,71 @@
+# Data directories (large files, download on VPS)
+data/raw/
+data/processed/
+data/tokenized/
+# data/static/ is NOT ignored — holds committed reference files (Ensembl mapping)
+logs/
+
+# Results: track JSON/CSV/MD evaluation outputs, ignore large binaries
+# Large embedding/prediction files are excluded by the binary format rules below
+# Result JSONs, CSVs, and the briefing are tracked for reproducibility
+
+# Model weights (download on VPS)
+/models/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Large binary formats
+*.h5ad
+*.pkl
+*.feather
+*.h5
+*.zarr/
+*.npy
+*.partial
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Environment
+.env
+.env.local
+*.env
+
+# Conda/venv
+.conda/
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VPS pipeline runtime state — sentinel .done markers and per-step status JSON
+results/_phase2_checkpoints/
+
+# Editable install metadata
+*.egg-info/
+src/vcbench.egg-info/
+
+# Manuscript-prep figure artifacts (Times-font versions for figure-text matching).
+# Generation scripts under figures/ + the manuscript-embedded versions are the
+# source of truth; these PDFs/PNGs are derivative and re-buildable.
+figures_times_roman/

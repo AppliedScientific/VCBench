@@ -1,0 +1,19 @@
+{
+  "per_tissue": [
+    {
+      "macro_f1": 0.08493360933597967,
+      "weighted_f1": 0.08674050633749507,
+      "n_shared_types": 54,
+      "tissue": "lung"
+    },
+    {
+      "macro_f1": 0.22694557500810433,
+      "weighted_f1": 0.6071098733417477,
+      "n_shared_types": 17,
+      "tissue": "liver"
+    }
+  ],
+  "avg_macro_f1": 0.155939592172042,
+  "avg_weighted_f1": 0.3469251898396214,
+  "n_tissues": 2
+}

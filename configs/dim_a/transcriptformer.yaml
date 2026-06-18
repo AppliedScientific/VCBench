@@ -1,0 +1,37 @@
+# TranscriptFormer Dim A recipe (§I.2 + Pearce et al. 2025).
+# Reproduces §I.4 reference: PRR = -0.174 on full Norman test (ZS+D regime).
+#
+# Consumed by: vcbench.models.TranscriptFormer; runtime in
+# src/models/run_transcriptformer_perturbation.py.
+
+model_id: transcriptformer-110m-12-species
+checkpoint_repo: czi/transcriptformer
+checkpoint_revision: TF-110M
+
+regime: "ZS+D"
+
+inference_config_built_in_process_via_omegaconf:
+  pretrained_embedding: true
+  output_keys: ["embeddings"]
+  notes: |
+    No on-disk YAML used; the OmegaConf object is built at runtime in
+    src/models/run_transcriptformer_perturbation.py per §I.2.
+
+perturbation_simulation:
+  method: gene_zeroing
+  notes: |
+    Input expression values set to zero at the perturbation target gene
+    indices, then the modified expression is re-embedded.
+
+decoder:
+  method: ridge_regression
+  alpha: 1.0
+  fit_on: ["control", "training_perturbations"]
+  notes: "Test held out per data/processed/splits/norman_gears_split.toml"
+
+output_clipping:
+  enabled: true
+  range: [0, "GT_max"]
+  notes: |
+    Predictions clipped to [0, observed-max] per gene to prevent ridge
+    extrapolation outside the training range.

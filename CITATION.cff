@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "VCBench: a capability-stratified benchmark for single-cell foundation models"
+message: "If you use this benchmark in your research, please cite both the preprint and the software release."
+type: software
+authors:
+  - name: "VCBench contributors"
+repository-code: "https://github.com/AppliedScientific/VCBench"
+license: MIT
+keywords:
+  - single-cell
+  - foundation-models
+  - benchmark
+  - perturbation-prediction
+  - cross-species-transfer
+  - GRN-inference
+  - reproducibility
+preferred-citation:
+  type: article
+  title: "VCBench: a capability-stratified benchmark for single-cell foundation models"
+  authors:
+    - name: "VCBench contributors"
+  journal: "bioRxiv"
+  year: 2026
+  notes: "Preprint DOI and Zenodo software DOI available from the repository."

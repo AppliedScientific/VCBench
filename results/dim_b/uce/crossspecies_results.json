@@ -1,0 +1,19 @@
+{
+  "per_tissue": [
+    {
+      "macro_f1": 0.029921068272667124,
+      "weighted_f1": 0.08583795785474178,
+      "n_shared_types": 26,
+      "tissue": "heart"
+    },
+    {
+      "macro_f1": 0.023540639404033253,
+      "weighted_f1": 0.0665985510150836,
+      "n_shared_types": 69,
+      "tissue": "brain"
+    }
+  ],
+  "avg_macro_f1": 0.026730853838350187,
+  "avg_weighted_f1": 0.0762182544349127,
+  "n_tissues": 2
+}

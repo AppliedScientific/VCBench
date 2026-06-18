@@ -1,0 +1,9 @@
+model,dataset,spearman_rho,p_value,n_perturbations,entropy_mean,entropy_std,mae_mean,mae_std,note
+Geneformer V2-316M,norman,-0.1188,2.25e-01,106,0.0012,0.0005,0.0185,0.0088,
+Geneformer V2-316M,replogle,N/A,N/A,0,N/A,N/A,N/A,N/A,Dataset not included in calibration probe (Norman only)
+scGPT (fine-tuned),norman,0.1314,1.77e-01,107,0.0019,0.0034,0.0203,0.0073,
+scGPT (fine-tuned),replogle,N/A,N/A,0,N/A,N/A,N/A,N/A,Dataset not included in calibration probe (Norman only)
+TranscriptFormer,norman,N/A,N/A,0,N/A,N/A,N/A,N/A,DNR (compute budget exceeded)
+TranscriptFormer,replogle,N/A,N/A,0,N/A,N/A,N/A,N/A,DNR
+Arc State,norman,N/A,N/A,0,N/A,N/A,N/A,N/A,DNR (skipped; no perturbation prediction API)
+Arc State,replogle,N/A,N/A,0,N/A,N/A,N/A,N/A,DNR

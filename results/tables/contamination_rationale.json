@@ -1,0 +1,122 @@
+{
+  "Geneformer|Norman": {
+    "risk": "unlikely",
+    "rationale": "Genecorpus-30M excludes cell lines; Norman uses K562 cell line"
+  },
+  "Geneformer|Replogle": {
+    "risk": "unlikely",
+    "rationale": "Genecorpus-30M excludes cell lines; Replogle uses K562/RPE1"
+  },
+  "Geneformer|CITE-seq": {
+    "risk": "unlikely",
+    "rationale": "Independent corpus (pre-Census); bone marrow may be included but not ADT data"
+  },
+  "Geneformer|Weinreb": {
+    "risk": "unlikely",
+    "rationale": "Genecorpus-30M is human-only; Weinreb is mouse HSPCs"
+  },
+  "Geneformer|sci-fate": {
+    "risk": "unlikely",
+    "rationale": "A549 cell line excluded from Genecorpus"
+  },
+  "scGPT|Norman": {
+    "risk": "unlikely",
+    "rationale": "Census excludes cell culture and perturbation assays"
+  },
+  "scGPT|Replogle": {
+    "risk": "unlikely",
+    "rationale": "Census excludes cell culture and perturbation assays"
+  },
+  "scGPT|CITE-seq": {
+    "risk": "likely",
+    "rationale": "GSE194122 present in Census 2023-05-15; RNA portion may overlap"
+  },
+  "scGPT|Weinreb": {
+    "risk": "unlikely",
+    "rationale": "In vitro culture excluded from Census inclusion criteria"
+  },
+  "scGPT|sci-fate": {
+    "risk": "unlikely",
+    "rationale": "A549 cell line excluded from Census"
+  },
+  "UCE|Norman": {
+    "risk": "unlikely",
+    "rationale": "Census excludes cell culture"
+  },
+  "UCE|Replogle": {
+    "risk": "unlikely",
+    "rationale": "Census excludes cell culture"
+  },
+  "UCE|CITE-seq": {
+    "risk": "likely",
+    "rationale": "Census-derived training data; GSE194122 likely included"
+  },
+  "UCE|Weinreb": {
+    "risk": "unlikely",
+    "rationale": "In vitro culture excluded"
+  },
+  "UCE|sci-fate": {
+    "risk": "unlikely",
+    "rationale": "Cell line excluded"
+  },
+  "TranscriptFormer|Norman": {
+    "risk": "unlikely",
+    "rationale": "Virtual Cells corpus excludes cell culture"
+  },
+  "TranscriptFormer|Replogle": {
+    "risk": "unlikely",
+    "rationale": "Virtual Cells corpus excludes perturbation assays"
+  },
+  "TranscriptFormer|CITE-seq": {
+    "risk": "likely",
+    "rationale": "CZI builds both Census and TranscriptFormer; high overlap likelihood"
+  },
+  "TranscriptFormer|Weinreb": {
+    "risk": "unlikely",
+    "rationale": "In vitro culture excluded"
+  },
+  "TranscriptFormer|sci-fate": {
+    "risk": "unlikely",
+    "rationale": "Cell line excluded"
+  },
+  "Arc State SE|Norman": {
+    "risk": "unlikely",
+    "rationale": "Census excludes cell culture"
+  },
+  "Arc State SE|Replogle": {
+    "risk": "unlikely",
+    "rationale": "Census excludes cell culture"
+  },
+  "Arc State SE|CITE-seq": {
+    "risk": "likely",
+    "rationale": "Census Jan 2025 likely includes GSE194122"
+  },
+  "Arc State SE|Weinreb": {
+    "risk": "unlikely",
+    "rationale": "In vitro culture excluded"
+  },
+  "Arc State SE|sci-fate": {
+    "risk": "unlikely",
+    "rationale": "Cell line excluded"
+  },
+  "Arc State ST|Replogle": {
+    "risk": "confirmed",
+    "rationale": "Replogle K562 explicitly in Arc State ST training data list"
+  },
+  "Arc State ST|Norman": {
+    "risk": "unlikely",
+    "rationale": "Not listed in Arc State ST training data"
+  },
+  "Arc State ST|CITE-seq": {
+    "risk": "N/A",
+    "rationale": "ST model does not evaluate on Dim D (cross-modal)"
+  },
+  "Arc State ST|Weinreb": {
+    "risk": "N/A",
+    "rationale": "ST model does not evaluate on Dim E (temporal)"
+  },
+  "Arc State ST|sci-fate": {
+    "risk": "N/A",
+    "rationale": "ST model does not evaluate on Dim E (temporal)"
+  }
+}

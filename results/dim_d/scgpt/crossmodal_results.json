@@ -1,0 +1,8 @@
+{
+  "mean_pearson_r": 0.0637989342212677,
+  "median_pearson_r": 0.034337371587753296,
+  "rmse": 0.8103820085525513,
+  "n_proteins": 50,
+  "n_valid_proteins": 50,
+  "model": "scgpt"
+}

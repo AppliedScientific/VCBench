@@ -1,0 +1,12 @@
+{
+  "kendall_tau": -0.04726776453386303,
+  "kendall_p": 1.4464981200567758e-41,
+  "knn_balanced_accuracy": 0.697652828352978,
+  "n_valid_dpt": 49008,
+  "n_cells": 49008,
+  "model": "geneformer",
+  "dataset": "weinreb",
+  "embedding_dim_original": 1152,
+  "embedding_dim_pca": 50,
+  "pca_variance_explained": 0.7164574265480042
+}

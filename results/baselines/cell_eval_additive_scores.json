@@ -1,0 +1,11 @@
+{
+  "method": "additive_baseline",
+  "dataset": "norman_doubles",
+  "n_perturbations": 71,
+  "pds_mean": 1.0,
+  "pds_median": 1.0,
+  "des_mean": 0.5665,
+  "des_median": 0.7157,
+  "mae_foldchange_mean": 2.2494,
+  "mae_foldchange_median": 2.1068
+}

@@ -1,0 +1,32 @@
+{
+  "lung": {
+    "macro_f1": 0.12715420371170702,
+    "weighted_f1": 0.16323538988178726,
+    "n_shared_types": 54,
+    "n_shared_genes": 935
+  },
+  "liver": {
+    "macro_f1": 0.22990057479220805,
+    "weighted_f1": 0.6548315779299517,
+    "n_shared_types": 17,
+    "n_shared_genes": 1047
+  },
+  "heart": {
+    "macro_f1": 0.21498538033507358,
+    "weighted_f1": 0.31644793099363866,
+    "n_shared_types": 26,
+    "n_shared_genes": 634
+  },
+  "kidney": {
+    "macro_f1": 0.10429676120546794,
+    "weighted_f1": 0.23007051461646064,
+    "n_shared_types": 44,
+    "n_shared_genes": 893
+  },
+  "brain": {
+    "macro_f1": 0.14625937772562217,
+    "weighted_f1": 0.2378362677862056,
+    "n_shared_types": 69,
+    "n_shared_genes": 729
+  }
+}

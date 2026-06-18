@@ -1,0 +1,25 @@
+# Diffusion pseudotime + PCA configuration for Dim E (§I.2).
+# Defines the binding non-FM baseline (PCA + DPT) at §I.5; reference τ-b
+# = 0.190 (mean over sci-fate + Weinreb under unweighted aggregation).
+
+method: pca_then_dpt
+
+pca:
+  n_components: 50
+  fit_on: cell_embeddings_or_expression
+
+dpt:
+  # scanpy.tl.dpt defaults — explicit so reproducibility is auditable
+  n_dcs: 10
+  n_branchings: 0                               # we do not branch
+  min_group_size: 0.01
+  allow_kendall_tau_shift: true
+
+aggregation:
+  across_datasets:
+    method: unweighted_arithmetic_mean
+    rationale: |
+      Cell-count-weighted averaging would let Weinreb (49K cells)
+      drown out sci-fate (6.5K cells) and dilute dataset-level signal —
+      most notably the scGPT Weinreb-specific τ-b ≈ -0.103 inversion.
+      Per §I.2 / Eq. 9 commentary.

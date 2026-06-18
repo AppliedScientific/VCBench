@@ -1,0 +1,17 @@
+{
+  "mean_pearson_r_delta": {
+    "0": 0.0
+  },
+  "median_pearson_r_delta": {
+    "0": 0.0
+  },
+  "mean_mse_delta": {
+    "0": 0.006830690559717852
+  },
+  "mean_direction_score": {
+    "0": 0.0
+  },
+  "n_perturbations": {
+    "0": 107
+  }
+}

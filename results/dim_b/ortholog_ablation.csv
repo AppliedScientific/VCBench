@@ -1,0 +1,15 @@
+model,tissue,input_mode,note,macroF1,wtdF1,n_classes
+uce,lung,ortholog,ortholog extraction failed; no row,,,
+uce,liver,ortholog,ortholog extraction failed; no row,,,
+uce,heart,ortholog,ortholog extraction failed; no row,,,
+uce,kidney,ortholog,ortholog extraction failed; no row,,,
+uce,brain,ortholog,ortholog extraction failed; no row,,,
+transcriptformer,lung,ortholog,ortholog extraction failed; no row,,,
+transcriptformer,liver,ortholog,ortholog extraction failed; no row,,,
+transcriptformer,heart,ortholog,ortholog extraction failed; no row,,,
+transcriptformer,kidney,ortholog,ortholog extraction failed; no row,,,
+transcriptformer,brain,ortholog,ortholog extraction failed; no row,,,
+uce,heart,native,from crossspecies_results.json,0.029921068272667124,0.08583795785474178,26.0
+uce,brain,native,from crossspecies_results.json,0.023540639404033253,0.0665985510150836,69.0
+transcriptformer,lung,native,from crossspecies_results.json,0.08493360933597967,0.08674050633749507,54.0
+transcriptformer,liver,native,from crossspecies_results.json,0.22694557500810433,0.6071098733417477,17.0

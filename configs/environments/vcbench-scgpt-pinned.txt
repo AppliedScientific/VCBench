@@ -1,0 +1,44 @@
+# vcbench-scgpt — exact pin set for a working scgpt install
+#
+# The default `pip install scgpt==0.1.7` fails on PyTorch 2.x because flash-attn
+# build-isolation doesn't see torch. The recipe below uses --no-deps for scgpt
+# and pre-installs each transitive dep individually with versions known to be
+# compatible with torch 2.1.2 + cu121.
+#
+# To reproduce:
+#   conda create -n vcbench-scgpt python=3.9 -y
+#   conda activate vcbench-scgpt
+#   pip install --index-url https://download.pytorch.org/whl/cu121 torch==2.1.2
+#   pip install --no-deps scgpt==0.1.7
+#   pip install -r configs/environments/vcbench-scgpt-pinned.txt
+#
+# Pinned set (frozen from a working install):
+anndata==0.10.9
+cell-gears==0.1.2
+numpy<2  # pinned to 1.26.4 in practice
+scanpy==1.10.3
+scib==1.1.7
+torch_geometric==2.4.0
+torchdata==0.7.1
+torchtext==0.16.2  # pin: must match torch 2.1.2; scgpt's nominal 0.14.0 is incompatible
+transformers==4.39.3  # pin: <4.40 (later versions break against torch 2.1.2 _pytree API)
+ipython
+pyyaml
+einops
+omegaconf
+hydra-core
+scikit-learn
+networkx
+dcor
+
+# Notes / why each pin:
+# - torchtext 0.16.2 — scgpt declares torchtext==0.14.0 but that's torch 1.13-only;
+#   torchtext 0.16.2 ships with torch 2.1.2 wheels.
+# - transformers <4.40 — newer transformers calls torch.utils._pytree.register_pytree_node
+#   which doesn't exist in torch 2.1.2. 4.39.3 is the last working version.
+# - cell-gears (the chenzlab/snap-stanford "GEARS perturbation" library) is the
+#   correct dep, NOT the unrelated "Gears" package on PyPI. Watch for that confusion.
+# - scgpt 0.1.7 with --no-deps avoids the flash-attn build-isolation failure;
+#   a FlashMHA shim then replaces the model.py entrypoint that needs flash_attn at runtime.
+# - scib brings in `scikit-misc` which conflicts mildly with scgpt's pin (>=0.1.4,<0.2.0
+#   declared but 0.3.1 installed); accept the warning, it doesn't matter at runtime.

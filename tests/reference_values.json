@@ -1,0 +1,107 @@
+{
+  "_doc": "VCBench reference values (VCBench (2026), §I.4 capability matrix + §I.3 reference test cases). Any drift in these values triggers test failure in tests/unit/test_reference_values.py. Edit only when the manuscript itself changes.",
+  "_tolerance_default": 0.001,
+
+  "dim_a": {
+    "geneformer_v2_316m_ft_d": {
+      "additive_evaluable_71": {"PRR": 0.627},
+      "full_106":              {"PRR": 0.6267, "DES": 0.8778}
+    },
+    "geneformer_v2_316m_zs_d_matched_regime": {
+      "full_107": {"PRR": 0.239}
+    },
+    "scgpt_ft": {
+      "additive_evaluable_71": {"PRR": 0.5445, "DES": 0.8718},
+      "full_107":              {"PRR": 0.5025, "DES": 0.8439},
+      "novel_36":              {"PRR": 0.4196, "DES": 0.7889}
+    },
+    "transcriptformer_zs_d": {
+      "additive_evaluable_71": {"PRR": -0.165},
+      "full_107":              {"PRR": -0.174},
+      "novel_36":              {"PRR": -0.192}
+    },
+    "arc_state": {
+      "full_107": {"PRR": 0.402, "DES": 0.751, "_role": "CANONICAL — used for VC Level decisions; real-control anchor is the principled cross-model convention (§I.3)"},
+      "full_107_pred_anchor": {"PRR": 0.4076, "DES": 0.7846, "_role": "FOR cell-eval cross-validation only — reproduces upstream cell-eval pearson_delta to 2e-6 absolute. NOT a competing canonical number. NOT used for VC Level decisions."},
+      "_canonical_convention": "real",
+      "_convention_notes": "Real-anchor is canonical because cross-model benchmarking requires a shared baseline — letting each model anchor on its own predicted control turns the metric into a per-model quantity, defeating the spec's shared-baseline premise. Pred-anchor exists solely so VCBench can numerically reconcile against upstream cell-eval reports.",
+      "_provenance": "Norman 2019 K562, disjoint GEARS simulation split (seed=1, 139 train / 107 held-out test). Cross-validated under matched anchor conventions: vcbench.evaluate_dim_a(control_anchor='pred') = 0.4076 vs cell-eval pearson_delta = 0.4076 (agree to 2e-6, numerical precision). Under the canonical real-control anchor PRR = 0.4021."
+    },
+    "additive_baseline": {
+      "additive_evaluable_71": {"PRR": 0.8903, "DES": 0.9986}
+    },
+    "mean_baseline": {
+      "full_107": {"PRR": 0.5786, "DES": 0.8706}
+    },
+    "no_change_baseline": {
+      "full_107": {"PRR": 0.0, "DES": 0.0}
+    }
+  },
+
+  "dim_b": {
+    "native_aggregate_macroF1": {
+      "pca_knn": {"value": 0.166, "_source": "results/dim_b/baselines_pca_knn_common.json::aggregate_native_macroF1 = 0.16647; native-protocol 5-tissue mean. Reported in the capability matrix as the PCA+kNN native baseline."}
+    },
+    "common_set_aggregate_macroF1": {
+      "pca_knn":          {"value": 0.4968, "tissues_evaluated": 5},
+      "geneformer":       {"value": 0.171,  "tissues_evaluated": 5},
+      "scgpt":            {"value": 0.123,  "tissues_evaluated": 5},
+      "uce":              {"value": 0.379,  "tissues_evaluated": 2, "tissues": ["heart", "brain"]},
+      "transcriptformer": {"value": 0.351,  "tissues_evaluated": 2, "tissues": ["lung", "liver"]}
+    },
+    "per_tissue_common_set_macroF1": {
+      "pca_knn":    {"lung": 0.4649, "liver": 0.4460, "heart": 0.5658, "kidney": 0.3265, "brain": 0.6806},
+      "geneformer": {"lung": 0.0188, "liver": 0.1719, "heart": 0.4833, "kidney": 0.0639, "brain": 0.1156},
+      "scgpt":      {"lung": 0.0594, "liver": 0.0071, "heart": 0.4795, "kidney": 0.0040, "brain": 0.0626},
+      "uce":        {"heart": 0.4580, "brain": 0.2999},
+      "transcriptformer": {"lung": 0.2060, "liver": 0.4954}
+    }
+  },
+
+  "dim_c": {
+    "table2": {
+      "geneformer":       {"AUROC": 0.626, "AUPRC": 0.001,  "EPR": 0.000},
+      "scgpt":            {"AUROC": 0.519, "AUPRC": 0.003,  "EPR": 20.05},
+      "co_expression":    {"AUROC": 0.558, "AUPRC": 0.004,  "EPR": 15.50},
+      "degree_null":      {"AUROC": 0.500, "AUPRC": 0.0003, "EPR": 1.13},
+      "pyscenic":         {"AUROC": 0.501, "AUPRC": 0.0011, "EPR": 3.50}
+    }
+  },
+
+  "dim_d": {
+    "table2_pearson": {
+      "transcriptformer":     0.232,
+      "uce":                  0.132,
+      "scgpt":                0.064,
+      "geneformer":           0.001,
+      "mean_celltype":        0.152,
+      "scLinear":             0.129
+    }
+  },
+
+  "dim_e": {
+    "table2_kendall_tau_b": {
+      "uce":              0.136,
+      "transcriptformer": 0.046,
+      "geneformer":      -0.017,
+      "scgpt":           -0.057,
+      "pca_dpt":          0.190,
+      "_note_transcriptformer": "0.046 = unweighted mean of sci-fate (0.0510) + Weinreb (0.0414), matching the Dim E aggregation rule used for the other four methods. 0.041 is the Weinreb-only bootstrap value; the canonical aggregate is 0.046."
+    },
+    "scgpt_weinreb_temporal_inversion": -0.103,
+    "transcriptformer_weinreb_bootstrap_std": 0.078
+  },
+
+  "dim_g_spread_error": {
+    "geneformer_norman_ft": {"rho": -0.119, "p": 0.225, "n_perturbations": 106},
+    "scgpt_norman_ft":      {"rho":  0.131, "p": 0.177, "n_perturbations": 107}
+  },
+
+  "vc_levels": {
+    "geneformer_v2_316m":   {"level": 1, "binding_dim": "A"},
+    "scgpt_fine_tuned":     {"level": 1, "binding_dim": "A"},
+    "uce_33_layer":         {"level": 1, "binding_dim": "E"},
+    "transcriptformer":     {"level": 2, "binding_dim": "D"},
+    "arc_state":            {"level": 1, "binding_dim": "A"}
+  }
+}

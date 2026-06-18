@@ -1,0 +1,12 @@
+{
+  "kendall_tau": 0.012839746189827556,
+  "kendall_p": 0.14881414970328283,
+  "knn_balanced_accuracy": 0.40939843143944604,
+  "n_valid_dpt": 6567,
+  "n_cells": 6567,
+  "model": "geneformer",
+  "dataset": "sci_fate",
+  "embedding_dim_original": 1152,
+  "embedding_dim_pca": 50,
+  "pca_variance_explained": 0.7249773740768433
+}

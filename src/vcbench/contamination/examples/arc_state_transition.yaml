@@ -1,0 +1,20 @@
+schema_version: vcbench-contamination-v1
+model: arc-state-transition
+model_version: ST-110M
+pretraining_corpus: 100M perturbed observations across multiple Perturb-seq corpora
+pretraining_corpus_md5: null
+included_datasets:
+  - "10.25452/figshare.plus.20029387"   # Replogle 2022 (Replogle-Nadig) — CONFIRMED in training set
+  # Adduri et al. 2025 explicitly enumerates Replogle-Nadig in the ST training corpus.
+excluded_datasets:
+  - GSE133344    # Norman 2019 — not listed in Adduri et al.'s training corpus
+  - GSE194122    # CITE-seq (RNA portion) — ST module evaluates on perturbations only, not cross-modal
+excluded_tissue_types: []
+notes: >
+  Confirmed contamination on Replogle K562. VCBench v1 does NOT evaluate Replogle
+  on Arc State (or on the other four FMs) for this reason — running the comparison
+  would be 4-clean vs 1-contaminated. Norman 2019 evaluation uses
+  configs/dim_a/arc_state_norman_gears_split.toml (139 train + 107 held-out, zero
+  overlap, verified against the disjoint GEARS split, seed=1). On this split the
+  canonical Arc State result is PRR = 0.402 (VC Level 1). See
+  src/vcbench/models/arc_state.py docstring.

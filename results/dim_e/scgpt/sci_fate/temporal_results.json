@@ -1,0 +1,12 @@
+{
+  "kendall_tau": -0.011489728818960836,
+  "kendall_p": 0.1963800974564318,
+  "knn_balanced_accuracy": 0.4386119892236436,
+  "n_valid_dpt": 6567,
+  "n_cells": 6567,
+  "model": "scgpt",
+  "dataset": "sci_fate",
+  "embedding_dim_original": 512,
+  "embedding_dim_pca": 50,
+  "pca_variance_explained": 0.9942396283149719
+}

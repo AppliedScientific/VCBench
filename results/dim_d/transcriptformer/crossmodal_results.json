@@ -1,0 +1,8 @@
+{
+  "mean_pearson_r": 0.2317645400762558,
+  "median_pearson_r": 0.1688048541545868,
+  "rmse": 0.6721348166465759,
+  "n_proteins": 50,
+  "n_valid_proteins": 50,
+  "model": "transcriptformer"
+}

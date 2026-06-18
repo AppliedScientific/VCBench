@@ -1,0 +1,40 @@
+{
+  "model": "transcriptformer",
+  "dataset": "weinreb",
+  "kendall_tau": 0.04143482492573246,
+  "kendall_tau_std": 0.07786124108864809,
+  "knn_balanced_accuracy": 0.3506141863764565,
+  "knn_balanced_accuracy_std": 0.02392750222967717,
+  "n_bootstrap": 10,
+  "bootstrap_subsample_size": 5000,
+  "bootstrap_valid_mean": 2559.4,
+  "n_cells_full": 49008,
+  "embedding_dim_original": 2048,
+  "embedding_dim_pca": 50,
+  "pca_variance_explained": 0.999978244304657,
+  "bootstrap_taus": [
+    0.10658690609113836,
+    0.09540253503681992,
+    -0.10017501029163166,
+    0.09605092952591904,
+    0.1055263796857501,
+    0.10650298789314398,
+    0.00011141615570389165,
+    -0.0704234874519576,
+    0.09997600542711287,
+    -0.025210412814674316
+  ],
+  "bootstrap_bas": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.38743895673027984,
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3861618823924338,
+    0.3865626641327576,
+    0.3333333333333333,
+    0.34597836050909364
+  ],
+  "note": "Full 49K ARPACK non-convergent. Bootstrap of 10\u00d75K random subsamples; mean\u00b1std reported."
+}

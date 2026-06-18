@@ -1,0 +1,20 @@
+# PCA + kNN Dim B baseline (§I.2 + §I.3 Eq. 4 + §I.5 binding baseline).
+# This is the binding strongest non-FM baseline for Dim B at §I.5.
+# Common-set aggregate macro F1 = 0.497 (§I.4 reference).
+#
+# Consumed by: vcbench.dimensions.dim_b_cross_species.baselines.pca_knn_classifier.
+
+method: pca_knn
+n_components: 50
+k: 5
+metric: cosine
+fit_on: source_species                          # human cells in the joint Census sample
+predict_on: target_species                      # mouse cells in the joint Census sample
+
+protocols:
+  - native           # each method scored on its own admitted vocabulary
+  - common_set       # binding protocol — Eq. 5 intersection
+
+per_tissue_evaluation:
+  tissues: [lung, liver, heart, kidney, brain]
+  cells_per_tissue_per_species: 50000           # 50k human + 50k mouse = 100k per tissue

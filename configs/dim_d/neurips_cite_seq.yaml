@@ -1,0 +1,23 @@
+# NeurIPS 2021 CITE-seq Dim D dataset config (§I.1).
+# Luecken et al. 2021 NeurIPS Datasets & Benchmarks.
+
+geo_accession: GSE194122
+reference: "Luecken et al. 2021 NeurIPS Datasets & Benchmarks"
+
+# Dataset composition (§I.1)
+total_cells: 66175
+n_donors: 12
+n_sites: 4
+n_genes: 13431
+n_proteins: 134                                 # surface ADTs
+tissue: BMMC                                    # bone marrow mononuclear cells
+
+local_path: "data/processed/neurips_cite_seq.h5ad"
+
+# Contamination caveat (§I.1 + §I.6)
+contamination_status: |
+  GSE194122 is CONFIRMED in CELLxGENE Census. Likely seen by all four
+  Census-trained models (scGPT, UCE, TranscriptFormer, Arc State
+  embedding module) on the RNA modality. Geneformer (Genecorpus-30M,
+  Census-independent) is the only contamination-free Dim D control.
+  Reflected in HuggingFace model cards.

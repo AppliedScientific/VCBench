@@ -1,0 +1,23 @@
+Supplementary Table 2 — Cross-species transfer per-tissue results (Dim B).
+
+Sampling: All tissues use 50,000 human + 50,000 mouse cells sampled from CELLxGENE Census v1.6.0 (LTS Apr 2025; STAR Methods §Cross-species), evaluated under the 15,847 one-to-one high-confidence orthologs from the joint Ensembl mapping.
+
+Protocols:
+- Native: each (model, tissue) pair is scored on the cell-type label intersection observed under that model's own tokenizer / preprocessing. Class counts vary across models (native_n_classes column) because Geneformer's rank-based vocabulary filter drops cells whose in-vocabulary gene count falls below threshold, shrinking the label intersection relative to scGPT/UCE/TranscriptFormer which operate on the full 50K-per-tissue sample.
+- Common-set: the per-tissue intersection of cell-type labels evaluable across all four foundation models (Geneformer, scGPT, UCE, TranscriptFormer) for that tissue. Per-tissue label intersections are persisted at results/dim_b/common_label_set_per_tissue.json and range from 2 (heart) to 11 (kidney) classes. Restricting all methods to the same label set removes the class-count confound that inflates native-protocol macro F1 for models with shrunken vocabularies.
+
+PCA+kNN baseline: 50-component PCA fitted on human cells, k=10 cosine kNN labelled by majority vote, evaluated on mouse cells under the same protocol (native or common-set) as the foundation model in the same row of the table. Implementation: src/baselines/cross_species.py.
+
+Coverage gaps:
+- TranscriptFormer common-set values are reported only for lung and liver. Heart / kidney / brain were not re-evaluated under the common-set protocol because the original H200 embedding run saved embeddings.npy without companion labels.npy arrays, so kNN cannot be re-computed from the cached artifacts. Re-extraction requires additional GPU time and is not included in this release.
+- UCE common-set values are reported only for heart and brain. Lung / liver / kidney mouse-side embeddings were never uploaded to the model release; the heart and brain tissues have both human and mouse embeddings present, hence the partial coverage. Same deferral as TranscriptFormer.
+- Arc State is structurally N/A on Dim B: its tokenizer lacks the ortholog mapping required for cross-species transfer.
+
+Aggregate values (common-set protocol where evaluable):
+- PCA+kNN (all five tissues): 0.497 macro F1, 0.712 weighted F1
+- Geneformer V2-316M (all five tissues): 0.171 macro F1
+- scGPT (fine-tuned) (all five tissues): 0.123 macro F1
+- UCE 33-layer (heart + brain only): 0.379 macro F1
+- TranscriptFormer (lung + liver only): 0.351 macro F1
+
+Per-tissue head-to-head: PCA+kNN beats every foundation model on lung, heart, kidney, and brain under the common-set protocol. On liver, TranscriptFormer (0.495) exceeds PCA+kNN (0.446) by Δ = 0.049 macro F1; this is the only foundation-model-beats-PCA+kNN cell in the matrix.

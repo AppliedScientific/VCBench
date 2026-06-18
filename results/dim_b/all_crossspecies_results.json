@@ -1,0 +1,114 @@
+{
+  "geneformer": {
+    "per_tissue": [
+      {
+        "macro_f1": 0.01883830455259027,
+        "weighted_f1": 0.009308338720103428,
+        "n_shared_types": 7,
+        "tissue": "lung"
+      },
+      {
+        "macro_f1": 0.16681122324220868,
+        "weighted_f1": 0.23833730788535537,
+        "n_shared_types": 6,
+        "tissue": "liver"
+      },
+      {
+        "macro_f1": 0.5645363408521303,
+        "weighted_f1": 0.9108833234164547,
+        "n_shared_types": 2,
+        "tissue": "heart"
+      },
+      {
+        "macro_f1": 0.06791726791726792,
+        "weighted_f1": 0.3790494755407036,
+        "n_shared_types": 11,
+        "tissue": "kidney"
+      },
+      {
+        "macro_f1": 0.08864542370899582,
+        "weighted_f1": 0.05236461397255822,
+        "n_shared_types": 5,
+        "tissue": "brain"
+      }
+    ],
+    "avg_macro_f1": 0.18134971205463862,
+    "avg_weighted_f1": 0.3179886119070351,
+    "n_tissues": 5
+  },
+  "scgpt": {
+    "per_tissue": [
+      {
+        "macro_f1": 9.729985306201877e-05,
+        "weighted_f1": 1.383962515412437e-05,
+        "n_shared_types": 54,
+        "tissue": "lung"
+      },
+      {
+        "macro_f1": 0.04311321355083685,
+        "weighted_f1": 0.42395150806928905,
+        "n_shared_types": 17,
+        "tissue": "liver"
+      },
+      {
+        "macro_f1": 0.007524665516998211,
+        "weighted_f1": 0.021212810781736487,
+        "n_shared_types": 26,
+        "tissue": "heart"
+      },
+      {
+        "macro_f1": 0.008514603067699819,
+        "weighted_f1": 0.08635456017270883,
+        "n_shared_types": 44,
+        "tissue": "kidney"
+      },
+      {
+        "macro_f1": 0.0012837463870610665,
+        "weighted_f1": 0.004104877333670706,
+        "n_shared_types": 69,
+        "tissue": "brain"
+      }
+    ],
+    "avg_macro_f1": 0.012106705675131595,
+    "avg_weighted_f1": 0.10712751919651184,
+    "n_tissues": 5
+  },
+  "uce": {
+    "per_tissue": [
+      {
+        "macro_f1": 0.029921068272667124,
+        "weighted_f1": 0.08583795785474178,
+        "n_shared_types": 26,
+        "tissue": "heart"
+      },
+      {
+        "macro_f1": 0.023540639404033253,
+        "weighted_f1": 0.0665985510150836,
+        "n_shared_types": 69,
+        "tissue": "brain"
+      }
+    ],
+    "avg_macro_f1": 0.026730853838350187,
+    "avg_weighted_f1": 0.0762182544349127,
+    "n_tissues": 2
+  },
+  "transcriptformer": {
+    "per_tissue": [
+      {
+        "macro_f1": 0.08493360933597967,
+        "weighted_f1": 0.08674050633749507,
+        "n_shared_types": 54,
+        "tissue": "lung"
+      },
+      {
+        "macro_f1": 0.22694557500810433,
+        "weighted_f1": 0.6071098733417477,
+        "n_shared_types": 17,
+        "tissue": "liver"
+      }
+    ],
+    "avg_macro_f1": 0.155939592172042,
+    "avg_weighted_f1": 0.3469251898396214,
+    "n_tissues": 2
+  }
+}

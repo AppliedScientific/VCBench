@@ -1,0 +1,8 @@
+{
+  "mean_pearson_r": 0.11006041616201401,
+  "median_pearson_r": 0.06274685263633728,
+  "rmse": 0.7740868330001831,
+  "n_proteins": 50,
+  "n_valid_proteins": 50,
+  "model": "PCA + ridge"
+}

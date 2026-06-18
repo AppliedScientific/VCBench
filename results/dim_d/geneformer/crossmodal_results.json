@@ -1,0 +1,8 @@
+{
+  "mean_pearson_r": 0.0006847945624031126,
+  "median_pearson_r": 0.0015946493949741125,
+  "rmse": 0.8480430245399475,
+  "n_proteins": 50,
+  "n_valid_proteins": 50,
+  "model": "geneformer"
+}

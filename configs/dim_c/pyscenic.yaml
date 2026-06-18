@@ -1,0 +1,16 @@
+# pySCENIC Dim C baseline configuration.
+# Reproduces §I.4 reference: AUROC 0.501 / AUPRC 0.0011 / EPR 3.50.
+
+method: pyscenic
+expression_input: "data/processed/beeline_hesc.h5ad"
+tf_list_input: "data/raw/scenic/allTFs_hg38.txt"
+
+databases:
+  motifs: "data/raw/scenic/motifs-v10nr_clust-nr.hgnc-m0.001-o0.0.tbl"
+  rankings:
+    - "data/raw/scenic/hg38__refseq-r80__500bp_up_and_100bp_down_tss.mc_v10_clust.genes_vs_motifs.rankings.feather"
+    - "data/raw/scenic/hg38__refseq-r80__10kb_up_and_down_tss.mc_v10_clust.genes_vs_motifs.rankings.feather"
+
+# pySCENIC runtime is in the vcbench-scenic conda env (Python 3.8) due to
+# dependency conflicts with the main analysis env (configs/environments/).
+runtime_env: vcbench-scenic

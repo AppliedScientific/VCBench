@@ -1,0 +1,11 @@
+# Arc State predict-mode config for Norman: routes all A549 cells to
+# the test split (used by `state tx predict` to generate adata_pred.h5ad).
+# Adjust the dataset path to point at your locally-preprocessed
+# norman_state.h5ad.
+[datasets]
+norman = "data/processed/norman_state.h5ad"   # adjust to your local path
+
+[training]
+
+[zeroshot]
+"norman.A549" = "test"

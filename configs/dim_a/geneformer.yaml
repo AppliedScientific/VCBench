@@ -1,0 +1,38 @@
+# Geneformer V2-316M Dim A fine-tuning recipe (§I.2 + Ahlmann-Eltze 2025).
+# These values reproduce the §I.4 reference: PRR = 0.627 on 71-pert
+# additive-evaluable subset; PRR = 0.6267 on full 107-pert test (n=106
+# evaluable; one perturbation excluded because the target gene is absent
+# from Geneformer's vocabulary).
+#
+# Consumed by: vcbench.models.Geneformer + GeneformerConfig.
+
+model_id: geneformer-v2-316m
+checkpoint_repo: ctheodoris/Geneformer        # HuggingFace
+checkpoint_revision: V2-316M
+
+architecture: BertForSequenceClassification
+n_classes: 247                                  # one class per Norman perturbation
+embedding_layer: 0                              # last hidden layer per Ahlmann-Eltze
+
+fine_tuning:
+  epochs: 3
+  learning_rate: 5.0e-5
+  per_device_batch_size: 12
+  optimizer: AdamW
+  weight_decay: 0.01
+  warmup_steps: 100
+  n_layers_to_freeze: 2                         # bottom 2 transformer layers
+
+perturbation_simulation:
+  method: token_deletion
+  notes: |
+    Perturbed gene tokens are removed from the rank-value sequence,
+    then the modified sequence is re-embedded. Geneformer's
+    InSilicoPerturber.perturb_data() only saves cosine sims (not raw
+    embeddings) so we call get_embs() directly per §I.2.
+
+decoder:
+  method: ridge_regression
+  alpha: 1.0
+  fit_on: ["control", "training_perturbations"]
+  predict: "expression_vector"

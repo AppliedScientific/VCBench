@@ -1,0 +1,26 @@
+model,dim,beats_trivial,beats_strongest
+Geneformer V2-316M,A,True,False
+Geneformer V2-316M,B,True,False
+Geneformer V2-316M,C,True,False
+Geneformer V2-316M,D,True,False
+Geneformer V2-316M,E,False,False
+scGPT (fine-tuned),A,True,False
+scGPT (fine-tuned),B,True,False
+scGPT (fine-tuned),C,True,False
+scGPT (fine-tuned),D,True,False
+scGPT (fine-tuned),E,False,False
+UCE 33-layer,A,False,False
+UCE 33-layer,B,True,False
+UCE 33-layer,C,False,False
+UCE 33-layer,D,True,False
+UCE 33-layer,E,True,False
+TranscriptFormer,A,False,False
+TranscriptFormer,B,True,False
+TranscriptFormer,C,False,False
+TranscriptFormer,D,True,True
+TranscriptFormer,E,True,False
+Arc State,A,True,False
+Arc State,B,False,False
+Arc State,C,False,False
+Arc State,D,False,False
+Arc State,E,False,False

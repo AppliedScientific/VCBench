@@ -1,0 +1,49 @@
+name: baselines-drift
+
+# Re-runs the reference-value drift detectors that lock the on-disk
+# baseline + per-dimension JSON / CSV artefacts to §I.4 capability matrix
+# numbers. If anyone re-runs the pipeline and the resulting JSONs come out
+# different from the manuscript, this workflow fails the PR.
+#
+# Once the preprint is posted these reference values are part of the
+# historical record and must not silently change. Any intentional update
+# requires an explicit edit to tests/reference_values.json in the same commit.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "results/**"
+      - "tests/reference_values.json"
+      - "tests/unit/**"
+      - "src/vcbench/**"
+  pull_request:
+    branches: [main]
+    paths:
+      - "results/**"
+      - "tests/reference_values.json"
+      - "tests/unit/**"
+      - "src/vcbench/**"
+
+jobs:
+  drift:
+    name: Reference-value drift detection (no GPU)
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install vcbench
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+          python -m pip install scikit-learn anndata
+
+      - name: Run all reference-value drift detectors
+        run: |
+          python -m pytest tests/unit/ -q --tb=short -k "matches_reference or invariant or partition_decomposition or weinreb"

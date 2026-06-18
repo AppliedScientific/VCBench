@@ -1,0 +1,15 @@
+{
+  "AUROC": 0.5,
+  "AUPRC": 0.000282,
+  "AUPRC_ratio": 1.0332,
+  "EPR": 1.1341,
+  "edge_density": 0.0002729656691467071,
+  "n_true_edges": 491,
+  "n_total_pairs": 1798761,
+  "mc_n_shuffles": 500,
+  "mc_seed": 42,
+  "AUROC_std": 0.0128,
+  "AUPRC_std": 4.9e-05,
+  "EPR_std": 2.882,
+  "baseline_kind": "degree-null (random ranking MC)"
+}

@@ -1,0 +1,24 @@
+# TRRUST v2 Dim C ground truth (§I.1).
+# Han et al. 2018. Curated TF→target regulatory edges.
+
+reference: "Han et al. 2018"
+version: v2
+n_edges: 8444
+n_tfs: 800
+species: human
+
+# Edge density (positives / total candidate (TF, target) pairs) on the
+# evaluation corpus is ~2.7e-4. The trivial baseline at this density is
+# the degree-null random ranker; AUPRC values land in the 10^-3 range,
+# which is why the §I.5 passing rule is conjunctive (AUPRC AND EPR).
+edge_density_approx: 0.00027
+
+source_url: "https://www.grnpedia.org/trrust/"
+local_path: "data/raw/trrust_rawdata.human.tsv"
+
+bh_correction:
+  family_size_m: 2                              # FM family: geneformer + scgpt
+  metric: AUPRC
+  notes: |
+    BH FDR correction at m=2 across the FM-vs-coexpression AUPRC tests
+    per Methods Statistical Analysis. TF and Arc State excluded as N/A.

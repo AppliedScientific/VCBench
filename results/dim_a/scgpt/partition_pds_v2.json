@@ -1,0 +1,27 @@
+{
+  "shared_doubles": {
+    "mean_pearson_r_delta": 0.544490850360041,
+    "median_pearson_r_delta": 0.5632349848747253,
+    "mean_mse_delta": 0.0054191589325955,
+    "mean_direction_score": 0.871830985915493,
+    "n_perturbations": 71,
+    "_n_perts": 71
+  },
+  "novel_singles": {
+    "mean_pearson_r_delta": 0.4195648729801178,
+    "median_pearson_r_delta": 0.483154833316803,
+    "mean_mse_delta": 0.003137483719102521,
+    "mean_direction_score": 0.7888888888888888,
+    "n_perturbations": 36,
+    "_n_perts": 36
+  },
+  "full": {
+    "mean_pearson_r_delta": 0.5024596804004406,
+    "median_pearson_r_delta": 0.530040979385376,
+    "mean_mse_delta": 0.0046514925056259,
+    "mean_direction_score": 0.8439252336448598,
+    "n_perturbations": 107,
+    "_n_perts": 107
+  },
+  "_partition_def": "shared=71 doubles (A+B), novel=36 singles (A+ctrl or ctrl+A)"
+}

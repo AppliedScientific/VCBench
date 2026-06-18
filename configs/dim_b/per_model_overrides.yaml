@@ -1,0 +1,30 @@
+# Per-model tissue coverage overrides for Dim B.
+# Documents which tissues each model is evaluated on under the common-set
+# protocol — the gaps the §I.4 footnotes call out and Supp Table 2 records.
+
+geneformer:
+  tissues: [lung, liver, heart, kidney, brain]
+  notes: "All 5 tissues evaluated under both protocols."
+
+scgpt:
+  tissues: [lung, liver, heart, kidney, brain]
+  notes: "All 5 tissues evaluated under both protocols."
+
+uce:
+  tissues: [heart, brain]
+  notes: |
+    Lung / liver / kidney mouse-side embeddings were never uploaded to
+    the model release. To fill: re-extract with both species.
+
+transcriptformer:
+  tissues: [lung, liver]
+  notes: |
+    TF holds species embeddings only for lung and liver in the public
+    release. Heart / kidney / brain re-extraction requires upstream
+    species-embedding additions (not available in this release).
+
+arc_state:
+  tissues: []
+  notes: |
+    Structurally N/A on Dim B per §I.4: tokenizer lacks the ortholog
+    mapping required for cross-species transfer.

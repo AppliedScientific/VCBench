@@ -1,0 +1,16 @@
+# BEELINE Dim C reference data (§I.1).
+# Pratapa et al. 2020. 7 ChIP-seq-grounded GRN datasets across 5 cell types.
+
+reference: "Pratapa et al. 2020"
+n_datasets: 7
+cell_types: [hESC, hHEP, mDC, mESC, mHSC]
+
+# Primary evaluation cell corpus for Dim C
+evaluation:
+  cell_type: hESC
+  n_cells: 758
+  n_tfs: 41
+  n_targets: 1627
+
+source_url: "https://zenodo.org/record/3701939"
+local_path: "data/processed/beeline_hesc.h5ad"

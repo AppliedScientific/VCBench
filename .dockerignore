@@ -1,0 +1,34 @@
+.git/
+.venv/
+.venv*/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Heavy data — never bake into the image
+data/raw/
+data/processed/
+data/tokenized/
+*.h5ad
+*.h5
+*.npy
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.pkl
+
+# Local figures cache (regenerable)
+figures_times_roman/
+
+# Editor / OS noise
+.DS_Store
+.idea/
+.vscode/

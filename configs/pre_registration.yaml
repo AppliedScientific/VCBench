@@ -1,0 +1,56 @@
+# =============================================================================
+# Pre-registered VC Level thresholds and per-dimension passing rules.
+# Frozen at benchmark execution time. Any change to this file must be
+# explicit and recorded in the release notes.
+#
+# Source of record: VCBench (2026) (VCBench), §I.5.
+# =============================================================================
+
+vc_levels:
+  level_0: "no dimension exceeds trivial baseline"
+  level_1: "exceeds trivial baseline on at least one scored dimension"
+  level_2: "exceeds strongest non-FM baseline on at least one scored dimension"
+  level_3: "exceeds strongest non-FM baseline on three or more scored dimensions"
+
+trivial_baselines:
+  dim_a: ["mean_prediction", "no_change"]   # PRR 0.579 / 0.000
+  dim_b: ["random_label_assignment"]
+  dim_c: ["degree_null"]                     # AUPRC 0.0003
+  dim_d: ["zero_predictor"]
+  dim_e: ["random_ordering"]
+
+strongest_non_fm_baselines:
+  dim_a: "additive_ahlmann_eltze"           # PRR 0.890
+  dim_b: "pca_knn_common_label_set"         # macro F1 0.497 (common-set protocol)
+  dim_c: ["co_expression", "degree_null", "pyscenic"]  # conjunctive
+  dim_d: "mean_celltype"                    # Pearson 0.152
+  dim_e: "pca_dpt"                          # tau-b 0.190
+
+passing_rules:
+  dim_b:
+    binding_protocol: "common_label_set"
+    rule: "macro F1 under common-label-set protocol must exceed PCA+kNN macro F1 under the same protocol"
+  dim_c:
+    rule: "AUPRC AND EPR exceed all three baselines (co-expression, degree-null, pySCENIC)"
+    amendment_history:
+      - date: "2025-original-pre-registration"
+        rule: "AUPRC alone exceeds all three baselines"
+      - date: "2026-during-execution"
+        rule: "AUPRC AND EPR exceed all three baselines"
+        rationale: >
+          scGPT EPR=20.05 with AUPRC at noise floor exposed the
+          insufficiency of an AUPRC-only rule; ranking signal would have
+          been dismissed because AUPRC sits near 10^-3 in the highly
+          imbalanced TRRUST regime. Conjunctive rule preserves the
+          ranking signal as evidence.
+        verdict_unchanged: true   # no FM passes Dim C under either rule
+
+# Reported VC Level assignments under the rules above (§I.5).
+# These are the source-of-record assignments; they must reproduce from the
+# §I.4 capability matrix via vcbench.evaluation.vc_levels.
+expected_assignments:
+  geneformer_v2_316m: 1   # exceeds no-change on Dim A: 0.627 > 0.000
+  scgpt_fine_tuned:    1   # exceeds no-change on Dim A: 0.503 > 0.000
+  uce_33_layer:        1   # exceeds random ordering on Dim E: 0.136 > 0
+  transcriptformer:    2   # exceeds mean-celltype on Dim D: 0.232 > 0.152
+  arc_state:           1   # exceeds no-change on Dim A: 0.115 > 0.000
