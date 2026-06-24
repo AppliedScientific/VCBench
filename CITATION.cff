@@ -3,7 +3,22 @@ title: "VCBench: a capability-stratified benchmark for single-cell foundation mo
 message: "If you use this benchmark in your research, please cite both the preprint and the software release."
 type: software
 authors:
-  - name: "VCBench contributors"
+  - family-names: Weidener
+    given-names: L.
+    affiliation: "Applied Scientific Intelligence, Inc."
+    email: lukas@appliedscientific.ai
+  - family-names: Brkić
+    given-names: M.
+    affiliation: "Applied Scientific Intelligence, Inc."
+  - family-names: Jovanović
+    given-names: M.
+    affiliation: "Applied Scientific Intelligence, Inc."
+  - family-names: Ulgac
+    given-names: E.
+    affiliation: "Applied Scientific Intelligence, Inc."
+  - family-names: Meduri
+    given-names: A.
+    affiliation: "Applied Scientific Intelligence, Inc."
 repository-code: "https://github.com/AppliedScientific/VCBench"
 license: MIT
 keywords:
@@ -16,9 +31,18 @@ keywords:
   - reproducibility
 preferred-citation:
   type: article
-  title: "VCBench: a capability-stratified benchmark for single-cell foundation models"
+  title: "VCBench: A Multi-Dimensional Benchmark for Single-Cell Foundation Models"
   authors:
-    - name: "VCBench contributors"
-  journal: "bioRxiv"
+    - family-names: Weidener
+      given-names: L.
+    - family-names: Brkić
+      given-names: M.
+    - family-names: Jovanović
+      given-names: M.
+    - family-names: Ulgac
+      given-names: E.
+    - family-names: Meduri
+      given-names: A.
   year: 2026
-  notes: "Preprint DOI and Zenodo software DOI available from the repository."
+  doi: "10.64898/2026.06.18.733146"
+  url: "https://doi.org/10.64898/2026.06.18.733146"

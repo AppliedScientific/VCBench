@@ -14,9 +14,13 @@ The fine-tuned checkpoint is published at
 from __future__ import annotations
 
 import os
-import tomllib
 from pathlib import Path
 from typing import TYPE_CHECKING
+
+try:  # tomllib is stdlib on Python >= 3.11; fall back to the tomli backport
+    import tomllib
+except ModuleNotFoundError:  # Python 3.9 / 3.10
+    import tomli as tomllib
 
 from vcbench.models.base import FoundationModel
 

@@ -1,10 +1,15 @@
 # VCBench
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![DOI](https://img.shields.io/badge/DOI-10.64898%2F2026.06.18.733146-blue.svg)](https://doi.org/10.64898/2026.06.18.733146)
+[![Leaderboard](https://img.shields.io/badge/%F0%9F%8F%86%20leaderboard-HF%20Space-ff9d00.svg)](https://huggingface.co/spaces/appliedscientific/vcbench-leaderboard)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20models%20%26%20data-appliedscientific-ffce1c.svg)](https://huggingface.co/appliedscientific)
+[![tests](https://github.com/AppliedScientific/VCBench/actions/workflows/test.yml/badge.svg)](https://github.com/AppliedScientific/VCBench/actions/workflows/test.yml)
+[![Applied Scientific Intelligence](https://img.shields.io/badge/lab-appliedscientific.ai-000000.svg)](https://appliedscientific.ai)
+
 VCBench is a capability-stratified benchmark for single-cell foundation models, evaluating five models against pre-registered baselines across five dimensions.
 
 > **First-time visitors — start here.** The v1.0.0 release reconciles VCBench's evaluator with upstream cell-eval to numerical precision via an explicit anchor-convention parameter. The Arc State checkpoint lives publicly at [`huggingface.co/appliedscientific/arc-state-norman-gears-corrected`](https://huggingface.co/appliedscientific/arc-state-norman-gears-corrected) — with paste-able reproduction snippets that recover the headline numbers in &lt;5 min on CPU.
->
-> *Repository access:* The canonical company-org repository at [`AppliedScientific/VCBench`](https://github.com/AppliedScientific/VCBench) is private during peer review. Contact the corresponding author for read access (URLs of the form `github.com/AppliedScientific/VCBench/...` will return 404 without an invite). The companion HuggingFace artefact + reproduction snippets are public and require no access request.
 
 ## What it produces
 
@@ -145,3 +150,28 @@ snapshot_download("appliedscientific/vcbench-embeddings", repo_type="dataset")
 - **GPU:** A100 80GB recommended (required for UCE; 40GB sufficient for others)
 - **Baseline construction:** CPU-only, no GPU needed
 - **Estimated GPU time:** ~75 GPU-hours total
+
+## License
+
+VCBench is released under the [MIT License](LICENSE).
+
+## Citation
+
+If you use VCBench in your research, please cite both the preprint and the
+software release. Machine-readable metadata is in [`CITATION.cff`](CITATION.cff).
+
+**Preprint** — Weidener, L., Brkić, M., Jovanović, M., Ulgac, E., Meduri, A.
+*VCBench: A Multi-Dimensional Benchmark for Single-Cell Foundation Models*,
+Applied Scientific Intelligence, Inc. (2026).
+[doi:10.64898/2026.06.18.733146](https://doi.org/10.64898/2026.06.18.733146)
+
+```bibtex
+@article{weidener2026vcbench,
+  title   = {VCBench: A Multi-Dimensional Benchmark for Single-Cell Foundation Models},
+  author  = {Weidener, L. and Brkić, M. and Jovanović, M. and Ulgac, E. and Meduri, A.},
+  year    = {2026},
+  doi     = {10.64898/2026.06.18.733146},
+  url     = {https://doi.org/10.64898/2026.06.18.733146},
+  note    = {Preprint}
+}
+```
