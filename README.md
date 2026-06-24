@@ -3,8 +3,6 @@
 VCBench is a capability-stratified benchmark for single-cell foundation models, evaluating five models against pre-registered baselines across five dimensions.
 
 > **First-time visitors — start here.** The v1.0.0 release reconciles VCBench's evaluator with upstream cell-eval to numerical precision via an explicit anchor-convention parameter. The Arc State checkpoint lives publicly at [`huggingface.co/appliedscientific/arc-state-norman-gears-corrected`](https://huggingface.co/appliedscientific/arc-state-norman-gears-corrected) — with paste-able reproduction snippets that recover the headline numbers in &lt;5 min on CPU.
->
-> *Repository access:* The canonical company-org repository at [`AppliedScientific/VCBench`](https://github.com/AppliedScientific/VCBench) is private during peer review. Contact the corresponding author for read access (URLs of the form `github.com/AppliedScientific/VCBench/...` will return 404 without an invite). The companion HuggingFace artefact + reproduction snippets are public and require no access request.
 
 ## What it produces
 
