@@ -1,5 +1,11 @@
 # VCBench
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Preprint: bioRxiv](https://img.shields.io/badge/preprint-bioRxiv-b31b1b.svg)](https://doi.org/10.64898/2026.06.18.733146)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20models%20%26%20data-appliedscientific-ffce1c.svg)](https://huggingface.co/appliedscientific)
+[![tests](https://github.com/AppliedScientific/VCBench/actions/workflows/test.yml/badge.svg)](https://github.com/AppliedScientific/VCBench/actions/workflows/test.yml)
+[![Applied Scientific Intelligence](https://img.shields.io/badge/lab-appliedscientific.ai-000000.svg)](https://appliedscientific.ai)
+
 VCBench is a capability-stratified benchmark for single-cell foundation models, evaluating five models against pre-registered baselines across five dimensions.
 
 > **First-time visitors — start here.** The v1.0.0 release reconciles VCBench's evaluator with upstream cell-eval to numerical precision via an explicit anchor-convention parameter. The Arc State checkpoint lives publicly at [`huggingface.co/appliedscientific/arc-state-norman-gears-corrected`](https://huggingface.co/appliedscientific/arc-state-norman-gears-corrected) — with paste-able reproduction snippets that recover the headline numbers in &lt;5 min on CPU.
@@ -143,3 +149,26 @@ snapshot_download("appliedscientific/vcbench-embeddings", repo_type="dataset")
 - **GPU:** A100 80GB recommended (required for UCE; 40GB sufficient for others)
 - **Baseline construction:** CPU-only, no GPU needed
 - **Estimated GPU time:** ~75 GPU-hours total
+
+## License
+
+VCBench is released under the [MIT License](LICENSE).
+
+## Citation
+
+If you use VCBench in your research, please cite both the preprint and the
+software release. Machine-readable metadata is in [`CITATION.cff`](CITATION.cff).
+
+**Preprint** — *VCBench: a capability-stratified benchmark for single-cell
+foundation models* (2026), [doi:10.64898/2026.06.18.733146](https://doi.org/10.64898/2026.06.18.733146).
+
+```bibtex
+@article{vcbench2026,
+  title   = {VCBench: a capability-stratified benchmark for single-cell foundation models},
+  author  = {VCBench contributors},
+  year    = {2026},
+  journal = {bioRxiv},
+  doi     = {10.64898/2026.06.18.733146},
+  url     = {https://doi.org/10.64898/2026.06.18.733146}
+}
+```

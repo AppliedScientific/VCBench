@@ -21,4 +21,5 @@ preferred-citation:
     - name: "VCBench contributors"
   journal: "bioRxiv"
   year: 2026
-  notes: "Preprint DOI and Zenodo software DOI available from the repository."
+  doi: "10.64898/2026.06.18.733146"
+  url: "https://doi.org/10.64898/2026.06.18.733146"
