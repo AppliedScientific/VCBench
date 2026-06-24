@@ -1,7 +1,8 @@
 # VCBench
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Preprint: bioRxiv](https://img.shields.io/badge/preprint-bioRxiv-b31b1b.svg)](https://doi.org/10.64898/2026.06.18.733146)
+[![DOI](https://img.shields.io/badge/DOI-10.64898%2F2026.06.18.733146-blue.svg)](https://doi.org/10.64898/2026.06.18.733146)
+[![Leaderboard](https://img.shields.io/badge/%F0%9F%8F%86%20leaderboard-HF%20Space-ff9d00.svg)](https://huggingface.co/spaces/appliedscientific/vcbench-leaderboard)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20models%20%26%20data-appliedscientific-ffce1c.svg)](https://huggingface.co/appliedscientific)
 [![tests](https://github.com/AppliedScientific/VCBench/actions/workflows/test.yml/badge.svg)](https://github.com/AppliedScientific/VCBench/actions/workflows/test.yml)
 [![Applied Scientific Intelligence](https://img.shields.io/badge/lab-appliedscientific.ai-000000.svg)](https://appliedscientific.ai)
@@ -159,16 +160,18 @@ VCBench is released under the [MIT License](LICENSE).
 If you use VCBench in your research, please cite both the preprint and the
 software release. Machine-readable metadata is in [`CITATION.cff`](CITATION.cff).
 
-**Preprint** — *VCBench: a capability-stratified benchmark for single-cell
-foundation models* (2026), [doi:10.64898/2026.06.18.733146](https://doi.org/10.64898/2026.06.18.733146).
+**Preprint** — Weidener, L., Brkić, M., Jovanović, M., Ulgac, E., Meduri, A.
+*VCBench: A Multi-Dimensional Benchmark for Single-Cell Foundation Models*,
+Applied Scientific Intelligence, Inc. (2026).
+[doi:10.64898/2026.06.18.733146](https://doi.org/10.64898/2026.06.18.733146)
 
 ```bibtex
-@article{vcbench2026,
-  title   = {VCBench: a capability-stratified benchmark for single-cell foundation models},
-  author  = {VCBench contributors},
+@article{weidener2026vcbench,
+  title   = {VCBench: A Multi-Dimensional Benchmark for Single-Cell Foundation Models},
+  author  = {Weidener, L. and Brki\'{c}, M. and Jovanovi\'{c}, M. and Ulgac, E. and Meduri, A.},
   year    = {2026},
-  journal = {bioRxiv},
   doi     = {10.64898/2026.06.18.733146},
-  url     = {https://doi.org/10.64898/2026.06.18.733146}
+  url     = {https://doi.org/10.64898/2026.06.18.733146},
+  note    = {Preprint}
 }
 ```
